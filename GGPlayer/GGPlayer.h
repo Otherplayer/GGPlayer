@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define VideoWidth [[UIScreen mainScreen] bounds].size.width
+#define VideoHeight (VideoWidth * 9 / 16.0)
 @interface GGPlayer : UIView
+
+
+- (void)play;
+- (void)stop;
+- (void)pause;
+
 
 @end

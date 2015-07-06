@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "GGPlayer.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong)GGPlayer *moviePlayer;
 @end
 
 @implementation ViewController
@@ -17,7 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.moviePlayer = [[GGPlayer alloc] initWithFrame:CGRectMake(0, 64, VideoWidth, VideoHeight)];
+    [self.view addSubview:self.moviePlayer];
+    
+    
 }
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+//    [self.moviePlayer play];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

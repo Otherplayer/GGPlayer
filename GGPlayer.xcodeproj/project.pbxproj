@@ -14,6 +14,11 @@
 		6376C60C1AEB6E110002EEBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6376C60B1AEB6E110002EEBA /* Images.xcassets */; };
 		6376C60F1AEB6E110002EEBA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6376C60D1AEB6E110002EEBA /* LaunchScreen.xib */; };
 		6376C61B1AEB6E110002EEBA /* GGPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376C61A1AEB6E110002EEBA /* GGPlayerTests.m */; };
+		6376C6251AEB6E210002EEBA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376C6241AEB6E210002EEBA /* MediaPlayer.framework */; };
+		6376C6271AEB706A0002EEBA /* example.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6376C6261AEB706A0002EEBA /* example.mp4 */; };
+		6376C62F1AEB76230002EEBA /* GGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376C62E1AEB76230002EEBA /* GGPlayer.m */; };
+		6376C6311AEB8DF80002EEBA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376C6301AEB8DF80002EEBA /* QuartzCore.framework */; };
+		6376C6401AEBB4830002EEBA /* TTRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376C63F1AEBB4830002EEBA /* TTRangeSlider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,14 @@
 		6376C6141AEB6E110002EEBA /* GGPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6376C6191AEB6E110002EEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6376C61A1AEB6E110002EEBA /* GGPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGPlayerTests.m; sourceTree = "<group>"; };
+		6376C6241AEB6E210002EEBA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6376C6261AEB706A0002EEBA /* example.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.mp4; sourceTree = "<group>"; };
+		6376C62D1AEB76230002EEBA /* GGPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGPlayer.h; sourceTree = "<group>"; };
+		6376C62E1AEB76230002EEBA /* GGPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGPlayer.m; sourceTree = "<group>"; };
+		6376C6301AEB8DF80002EEBA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6376C6381AEBA43E0002EEBA /* TTRangeSliderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRangeSliderDelegate.h; sourceTree = "<group>"; };
+		6376C63E1AEBB4830002EEBA /* TTRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRangeSlider.h; sourceTree = "<group>"; };
+		6376C63F1AEBB4830002EEBA /* TTRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRangeSlider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6376C6311AEB8DF80002EEBA /* QuartzCore.framework in Frameworks */,
+				6376C6251AEB6E210002EEBA /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 		6376C5F21AEB6E110002EEBA = {
 			isa = PBXGroup;
 			children = (
+				6376C6321AEB8DFE0002EEBA /* Framework */,
 				6376C5FD1AEB6E110002EEBA /* GGPlayer */,
 				6376C6171AEB6E110002EEBA /* GGPlayerTests */,
 				6376C5FC1AEB6E110002EEBA /* Products */,
@@ -81,10 +97,12 @@
 		6376C5FD1AEB6E110002EEBA /* GGPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				6376C6281AEB74AC0002EEBA /* Player */,
 				6376C6021AEB6E110002EEBA /* AppDelegate.h */,
 				6376C6031AEB6E110002EEBA /* AppDelegate.m */,
 				6376C6051AEB6E110002EEBA /* ViewController.h */,
 				6376C6061AEB6E110002EEBA /* ViewController.m */,
+				6376C6261AEB706A0002EEBA /* example.mp4 */,
 				6376C6081AEB6E110002EEBA /* Main.storyboard */,
 				6376C60B1AEB6E110002EEBA /* Images.xcassets */,
 				6376C60D1AEB6E110002EEBA /* LaunchScreen.xib */,
@@ -117,6 +135,43 @@
 				6376C6191AEB6E110002EEBA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6376C6281AEB74AC0002EEBA /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				6376C6291AEB74BB0002EEBA /* New Group */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		6376C6291AEB74BB0002EEBA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				6376C63A1AEBA4460002EEBA /* TTRangeSlider */,
+				6376C62D1AEB76230002EEBA /* GGPlayer.h */,
+				6376C62E1AEB76230002EEBA /* GGPlayer.m */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		6376C6321AEB8DFE0002EEBA /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				6376C6301AEB8DF80002EEBA /* QuartzCore.framework */,
+				6376C6241AEB6E210002EEBA /* MediaPlayer.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		6376C63A1AEBA4460002EEBA /* TTRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				6376C63E1AEBB4830002EEBA /* TTRangeSlider.h */,
+				6376C63F1AEBB4830002EEBA /* TTRangeSlider.m */,
+				6376C6381AEBA43E0002EEBA /* TTRangeSliderDelegate.h */,
+			);
+			name = TTRangeSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +256,7 @@
 			files = (
 				6376C60A1AEB6E110002EEBA /* Main.storyboard in Resources */,
 				6376C60F1AEB6E110002EEBA /* LaunchScreen.xib in Resources */,
+				6376C6271AEB706A0002EEBA /* example.mp4 in Resources */,
 				6376C60C1AEB6E110002EEBA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +278,8 @@
 				6376C6071AEB6E110002EEBA /* ViewController.m in Sources */,
 				6376C6041AEB6E110002EEBA /* AppDelegate.m in Sources */,
 				6376C6011AEB6E110002EEBA /* main.m in Sources */,
+				6376C6401AEBB4830002EEBA /* TTRangeSlider.m in Sources */,
+				6376C62F1AEB76230002EEBA /* GGPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

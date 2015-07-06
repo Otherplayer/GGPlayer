@@ -38,17 +38,17 @@ const float HANDLE_DIAMETER = 16;
 
     //draw the slider line
     self.sliderLine = [CALayer layer];
-    self.sliderLine.backgroundColor = self.tintColor.CGColor;
+    self.sliderLine.backgroundColor = [UIColor grayColor].CGColor;
     [self.layer addSublayer:self.sliderLine];
     
     self.sliderLineCover = [CALayer layer];
-    self.sliderLineCover.backgroundColor = [UIColor redColor].CGColor;
+    self.sliderLineCover.backgroundColor = [UIColor whiteColor].CGColor;
     [self.layer addSublayer:self.sliderLineCover];
     
     //draw the minimum slider handle
     self.leftHandle = [CALayer layer];
     self.leftHandle.cornerRadius = 8.0f;
-    self.leftHandle.backgroundColor = [UIColor groupTableViewBackgroundColor].CGColor;
+    self.leftHandle.backgroundColor = [UIColor whiteColor].CGColor;
     [self.layer addSublayer:self.leftHandle];
 
     self.leftHandle.frame = CGRectMake(0, 0, HANDLE_DIAMETER, HANDLE_DIAMETER);
@@ -364,7 +364,7 @@ const float HANDLE_DIAMETER = 16;
     struct CGColor *color = self.tintColor.CGColor;
     
     [CATransaction begin];
-    [CATransaction setAnimationDuration:0.5];
+    [CATransaction setAnimationDuration:0.25];
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut] ];
     self.sliderLine.backgroundColor = color;
     self.leftHandle.backgroundColor = color;
@@ -389,14 +389,14 @@ const float HANDLE_DIAMETER = 16;
     }
 }
 
-- (NSNumberFormatter *)decimalNumberFormatter {
+//- (NSNumberFormatter *)decimalNumberFormatter {
 //    if (!_decimalNumberFormatter){
 //        _decimalNumberFormatter = [[NSNumberFormatter alloc] init];
 //        _decimalNumberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
 //        _decimalNumberFormatter.maximumFractionDigits = 0;
 //    }
 //    return _decimalNumberFormatter;
-}
+//}
 
 - (void)setMinValue:(float)minValue {
     _minValue = minValue;
